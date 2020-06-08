@@ -1,0 +1,16 @@
+version: 0.2
+
+
+    phases:
+      install:
+        commands:
+          - echo Installing requirements from file
+          - pip3 install -r requirements.txt
+      build:
+        commands:
+          - echo Build started on `date`
+          - echo Building and running tests
+          - python tests.py
+      post_build:
+        commands:
+          - echo Build completed on `date`
